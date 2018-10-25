@@ -17,7 +17,7 @@ ln -s ${DST}/${DATE} ${DST}/today
 echo -n "Backing up RocketChat Server (Snap Install)... "
 echo "...Stopping RocketChat for Backup Purpose..."
 echo "...This starts service downtime at `date`..."
-#service snap.rocketchat-server.rocketchat-server stop
+service snap.rocketchat-server.rocketchat-server stop
 echo "...Creating Backup. This Could Take some time..."
 backuplocation=`snap run rocketchat-server.backupdb | grep rocketchat_backup | cut -d' ' -f11-`
 backupstatus=$?
